@@ -1,0 +1,20 @@
+﻿{
+  "name": "API_TAXI4U",
+  "version": "0.2.0",
+  "description": "Application de recherche de taxis",
+  "main": "server.js",
+  "author": [
+    "Thomas Alias",
+    "Florian Bretaud",
+    "Baptiste Feix"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/aliascorporation/taxi4u.git"
+  },
+  "dependencies": {
+    "body-parser": "^1.12.3",
+    "express": "^4.12.3",
+    "lodash": "^3.7.0"
+  }
+}
