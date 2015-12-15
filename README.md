@@ -25,7 +25,7 @@ Taxi4U utilise les technologies suivantes pour son fonctionnement:
 
 ### Installation
 
-apinode:
+* apinode:
 
 ```sh
 $ git clone [git-repo-url] taxi4u
@@ -34,20 +34,15 @@ $ npm install
 $ node server.js
 ```
 
-guiangular:
+* guiangular:
 
 Lancer *index.html*
 
 
-
-   [dill]: <https://github.com/joemccann/dillinger>
    [git-repo-url]: <https://github.com/aliascorporation/taxi4u.git>
    [df1]: <http://http://le.taxi/>
-   [marked]: <https://github.com/chjj/marked>
-   [Ace Editor]: <http://ace.ajax.org>
    [node.js]: <http://nodejs.org>
    [Twitter Bootstrap]: <http://twitter.github.com/bootstrap/>
-   [keymaster.js]: <https://github.com/madrobby/keymaster>
    [express]: <http://expressjs.com>
    [AngularJS]: <http://angularjs.org>
 
