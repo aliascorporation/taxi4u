@@ -1,4 +1,8 @@
 module.exports = function (app) {
+	var request = require('request');
+	var geocoder = require('geocoder');
+	
+	//Données de test
 	var lesTaxis = [
 		 {
 		  "ads": {
@@ -111,20 +115,54 @@ module.exports = function (app) {
 	});
 	
 	app.get('/taxis', function(req, res) {
-		var lon = req.query.lon;
-		var lat = req.query.lat;
+		var ville = req.query.ville;
+		var lon = req.query.lat;
+		var lat req.query.lon;
+		
+		//Sans géolocalisation ip, on cherche à partir de la vile rensignée
+		if(typeof lon === 'undefined' || typeof lat === 'undefined'){
+			geocoder.geocode(ville, function ( err, data ) {
+			  // do stuff with data
+			  lon = data.results[0].geometry.location.lng;
+			  lat = data.results[0].geometry.location.lat;
+			  
+			  console.log(lat);
+			  console.log(lon);
+			  
+			  //API le.taxi
+				request({
+					uri: "https://api.taxi/taxis?lat="+lat+"&lon="+lon,
+					method: "GET",
+					headers: {
+						"Accept": "application/json",
+						"X-VERSION": 2,
+						"X-API-KEY": "46f06ed1-0124-4edc-9283-0df69a604ef4"
+					}
+				}, function(err, response, body){
+					console.log(JSON.parse(body));
+					res.type('application/json');
+					res.json(JSON.parse(body));
+					
+				});
+			  
+			});
+		}
+		
+		else{
+			//Si on a la géolocalisation ip, on trouve directement les taxi avec lat/lon
+		}
+		
+		
 		var taxis = [];
 		
-		lesTaxis.forEach(function(taxi){
+		//Notre API
+		/*lesTaxis.forEach(function(taxi){
 			if(taxi.position.lat == lat && taxi.position.lon == lon){
 				taxis.push(taxi);
 			}
-		});
+		});*/
 		
-		var result = {data : taxis};
 		
-		res.type('application/json');
-		res.json(result);
 	});
 	
 	app.get('/taxis/:id', function(req, res) {
