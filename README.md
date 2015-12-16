@@ -3,11 +3,11 @@
 Taxi4U est une application permettant de lister les taxis disponnibles à proximité d'une adresse donnée.<br />
 La liste des diférents taxis peut être obtenue soit en saisisant directement l'adresse, soit en partageant sa géolocalisation.
 
-L'application comporte dex composants :
+L'application comporte deux composants :
   - apinode
   - guiangular
 
-L'API (apinode) permet de gérer les coordonnées géographiques et les envoie ver l'API [le.taxi][df1] afin de récupérer la liste des taxis.
+L'API (apinode) permet de gérer les coordonnées géographiques et les envoie vers l'API [le.taxi][df1] afin de récupérer la liste des taxis.
 
 Le client associé (guiangular) est une interface web communiquant avec l'API et affichant les taxis.
 
