@@ -40,7 +40,7 @@ Lancer *index.html*
 
 
    [git-repo-url]: <https://github.com/aliascorporation/taxi4u.git>
-   [df1]: <http://http://le.taxi/>
+   [df1]: <http://le.taxi/>
    [node.js]: <http://nodejs.org>
    [Twitter Bootstrap]: <http://twitter.github.com/bootstrap/>
    [express]: <http://expressjs.com>
