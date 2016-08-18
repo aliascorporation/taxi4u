@@ -30,6 +30,7 @@ Taxi4U utilise les technologies suivantes pour son fonctionnement:
 ```sh
 $ git clone [git-repo-url] taxi4u
 $ cd taxi4u
+$ cd apinode
 $ npm install
 $ node server.js
 ```
